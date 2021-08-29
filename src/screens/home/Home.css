@@ -7,3 +7,8 @@
     padding: 8px;
 }
 
+ul.upcoming-movies {
+    flex-wrap: nowrap;
+    margin: 0px !important;
+  }
+
