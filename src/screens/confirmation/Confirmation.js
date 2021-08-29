@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../common/header/Header";
+import Header from "../../commom/header/Header";
 import "./Confirmation.css";
 import Typography from "@material-ui/core/Typography";
 import Input from "@material-ui/core/Input";
@@ -58,7 +58,8 @@ const Confirmation = (props) => {
       },
       body: data,
     })
-      .then((response) => response.json())
+      .then((response) =>  
+      response.json())
       .then((data) => {
         setBookingId(data.reference_number);
       });

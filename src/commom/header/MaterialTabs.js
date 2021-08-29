@@ -5,7 +5,7 @@ import RegisterForm from './RegisterForm'
 
 
 
-function MaterialTabs() {
+function MaterialTabs(props) {
     const [value, setValue] = React.useState(0);
     const handleTabs = (event, newValue) => {
         setValue(newValue);
@@ -22,9 +22,9 @@ function MaterialTabs() {
             </Tabs>
 
             <TablePanel className="center" value={value} index={0}>               
-                        <LoginForm/>
+                        <LoginForm {...props}/>
                  </TablePanel>
-            <TablePanel className="center" value={value} index={1} ><RegisterForm/></TablePanel>
+            <TablePanel className="center" value={value} index={1} ><RegisterForm {...props}/></TablePanel>
 
 
         </div>

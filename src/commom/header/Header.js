@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import "./Header.css"
 import ReactLogo from '../../assets/logo.svg';
 import { Button } from '@material-ui/core'
 import Modal from 'react-modal';
 import ReactDOM from 'react-dom';
 import MaterialTabs from './MaterialTabs';
+
 
 
 const customStyles = {
@@ -20,10 +21,11 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-function Header() {
+function Header(props) {
 
     // let subtitle;
     const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [loginStatus, setLoginStatus] = React.useState(false);
 
     function openModal() {
         setIsOpen(true);
@@ -37,12 +39,41 @@ function Header() {
     function closeModal() {
         setIsOpen(false);
     }
+
+    // function isLoggedIn(){
+    //     const login=JSON.parse(localStorage.getItem("userDetails"))
+    //     return login&&login.loginStatus       
+    // }
+
+    function handleLogout(){
+        const userDetails=JSON.parse(localStorage.getItem("userDetails"))
+        userDetails.loginStatus = false
+        localStorage.setItem("userDetails", JSON.stringify(userDetails))
+        setLoginStatus(false)
+
+        
+    }
+
+    function updateLoginStatus(){
+        const login=JSON.parse(localStorage.getItem("userDetails"))
+        if(login&&login.loginStatus){
+            setLoginStatus(true)
+        }else{
+            setLoginStatus(false)
+        }
+    }
+
+    useEffect(updateLoginStatus)
+
     return (
         <div>
             <div>
                 <div className="header">
                     <img className="logo rotate linear infinite" src={ReactLogo} alt='' />
-                    <Button variant="contained" className="btnLogin" onClick={() => { openModal() }} >Login</Button>
+                    
+                    
+                    {!loginStatus&&<Button variant="contained" className="btnLogin" onClick={() => { openModal() }} >Login</Button>}
+                    {loginStatus&&<Button variant="contained" className="btnLogin" onClick={handleLogout}>Logout</Button>}
                     <Modal
                         isOpen={modalIsOpen}
                         // onAfterOpen={afterOpenModal}
@@ -50,7 +81,8 @@ function Header() {
                         style={customStyles}
                         contentLabel="Example Modal"
                         ariaHideApp={false}>
-                            <MaterialTabs/>
+
+                            <MaterialTabs {...props} setLoginStatus={setLoginStatus} setIsOpen={setIsOpen}/>
                     </Modal>
                 </div>
 
