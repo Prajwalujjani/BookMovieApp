@@ -69,7 +69,7 @@ function Header(props) {
     return (
         <div>
             <div>
-                <div className="header">
+                <div {...props} className="header">
                     <img className="logo rotate linear infinite" src={ReactLogo} alt='' />
                     
                     

@@ -175,8 +175,8 @@ function Home(props) {
               <GridListTile
                 key={movie.poster_url}
                 className="clickable-movie-poster"
-                onClick={getMovieClickHandler(movie.id)}
-              >
+                onClick={getMovieClickHandler(movie.id)}>
+              
                 <img src={movie.poster_url} alt={movie.title} />
                 <GridListTileBar
                   title={movie.title}

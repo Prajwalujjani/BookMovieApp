@@ -10,6 +10,7 @@
 ul.upcoming-movies {
     flex-wrap: nowrap;
     margin: 0px !important;
+    width: 100%;
   }
 
   .main-container {
