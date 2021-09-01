@@ -193,7 +193,7 @@ const BookShow = (props) => {
   };
 
   return (
-    <div>
+    <div className="bookshow-main-container">
       <Header baseUrl={props.baseUrl} />
       <div className="bookShow">
         <Typography className="back">

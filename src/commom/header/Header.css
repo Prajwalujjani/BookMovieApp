@@ -5,7 +5,8 @@
     padding-bottom: 8px;
     padding-right: 32px;
     background-color: #222;
-    
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo{
@@ -34,8 +35,9 @@
     animation-iteration-count: infinite;
   }
   
-  .btnLogin{
-      float: right;
+  
+  #btnBookShow {    
+    margin-right: 12px ;
   }
 
   .mod{
