@@ -1,50 +1,51 @@
-.details-page-container {
-    width: 100%;
-  }
-  
-  .main-container {
-    display: flex;
-  }
-  
-  .main-container > .left {
-    width: 20%;
-    padding: 0px 16px;
-  }
-  .main-container > .right {
-    width: 20%;
-    padding: 0px 16px;
-  }
-  
-  .main-container > .left > img {
-    width: 100%;
-  }
-  
-  .main-container > .middle {
-    width: 60%;
-    padding: 0px 16px;
-  }
-  
-  div.back-to-home-button {
+div.back-to-home-btn {
     margin-top: 8px;
     margin-left: 24px;
     margin-bottom: 0px;
     height: 24px;
   }
   
-  div.back-to-home-button:hover {
+  div.back-to-home-btn:hover {
     cursor: pointer;
   }
-  
-  .bold-text {
-    font-weight: bold !important;
+
+.details-page-container {
+    width: 100%;
   }
   
-  .trailer-block,
-  .plot-block {
-    margin-top: 16px;
+  .detail-container {
+    display: flex;
   }
   
-  p.artists-block-title {
-    margin-top: 16px;
-    margin-bottom: 16px;
+  div.image-poster {
+    width: 20%;
+    padding:0px 16px;
   }
+  div.artist-img {
+    width: 20%;
+    padding-left: 40px;
+  }
+  div.bold{
+      font-weight: bold;
+  }
+  
+  .movie-details {
+    width: 60%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .artists_text{
+      margin-top: 16px;
+      margin-bottom: 16px;
+  }
+
+  .youtube-video{
+      margin-top: 16px;
+  }
+  
+  
+  
+ 
+  
+ 
