@@ -9,6 +9,7 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-image-file-resizer": "^0.4.7",
+    "react-material-ui-form-validator": "^2.1.4",
     "react-modal": "^3.14.3",
     "react-modal-login": "^1.4.5",
     "react-router-dom": "^5.2.0",
